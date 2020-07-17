@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
-import {View, Text, TouchableOpacity, Alert, AsyncStorage } from 'react-native';
+import {View, Text, TouchableOpacity, Alert, AsyncStorage , Image } from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Button from 'apsl-react-native-button';
@@ -72,7 +72,7 @@ class Login extends Component {
             alignItems: 'center',
             marginTop: 70,
           }}>
-          <Icon name="opencart" type="font-awesome" color="#212121" size={50} />
+       <Image source={require('./img/hero.jpg')} />
 
           <View
             style={{
@@ -80,7 +80,7 @@ class Login extends Component {
               marginTop: 40,
             }}>
             <Text style={{fontSize: 28, color: '#373737', marginBottom: 30}}>
-              Se connecter
+             Sign In
             </Text>
             <Input
               onChangeText={value => {
@@ -112,7 +112,7 @@ class Login extends Component {
               onChangeText={value => {
                 return this.setState({password: value});
               }}
-              placeholder="Mot de passe"
+              placeholder="Password"
               onBlur={() => this.onBlur(0)}
               onFocus={() => this.onFocus(2)}
               inputContainerStyle={{
@@ -154,22 +154,7 @@ class Login extends Component {
           </Button>
         </View>
 
-        <TouchableOpacity>
-          <Text
-            style={{
-              fontSize: 16,
-              textAlign: 'center',
-              color: '#373737',
-              marginTop: 30,
-            }}
-            onPress={() => this.props.navigation.navigate('register')}>
-            Vous n'avez pas un compte ?
-            <Text style={{fontWeight: 'bold', color: '#ffc107', fontSize: 17}}>
-              {' '}
-              S'inscrire
-            </Text>
-          </Text>
-        </TouchableOpacity>
+        
       </KeyboardAwareScrollView>
     );
   }

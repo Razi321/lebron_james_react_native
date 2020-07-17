@@ -7,15 +7,13 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Profile from "./Components/Profile";
 import Login from "./Components/Login";
-import Search from "./Components/Search";
+import Teams from "./Components/Teams";
 import SplashScreen from "./Components/SplashScreen";
 import SplashScreen1 from "./Components/SplashScreen1";
-import Register from "./Components/Register";
+
 import Descover from "./Components/Descover";
 import profileUpdate from "./Components/profileUpdate";
-import GymDetail from "./Components/GymDetail";
-import Activities from "./Components/Activities";
-import ActivityDetail from "./Components/ActivityDetail";
+
 //import Screen1 from './Components/Screen1';
 
 const Stack = createStackNavigator();
@@ -32,11 +30,9 @@ class App extends Component {
       <Stack.Screen name="splashScreen" component={SplashScreen} />
       <Stack.Screen name="splashScreen1" component={SplashScreen1} />
       <Stack.Screen name="login" component={Login} />
-      <Stack.Screen name="register" component={Register} />
+     
       <Stack.Screen name="profileupdate" component={profileUpdate} />
-      <Stack.Screen name="gymdetail" component={GymDetail} />
-      <Stack.Screen name="activities" component={Activities} />
-      <Stack.Screen name="activityDetail" component={ActivityDetail} />
+      
 
 
       <Stack.Screen name="user" children={this.createBottomTabs} />
@@ -55,19 +51,19 @@ class App extends Component {
           style={{ marginBottom: 16 }}
           component={Descover}
           options={{
-            tabBarLabel: "Découvrir",
+            tabBarLabel: "Home",
             tabBarIcon: ({ color }) => (
-              <FontAwesome color={color} size={30} name={"compass"} />
+              <FontAwesome color={color} size={30} name={"home"} />
             ),
           }}
         />
         <BottomTabs.Screen
           name="search"
-          component={Search}
+          component={Teams}
           options={{
-            tabBarLabel: "rechercher",
+            tabBarLabel: "teams",
             tabBarIcon: ({ color }) => (
-              <FontAwesome color={color} size={30} name={"search"} />
+              <FontAwesome color={color} size={30} name={"compass"} />
             ),
           }}
         />

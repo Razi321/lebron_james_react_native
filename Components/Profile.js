@@ -19,20 +19,8 @@ class Profile extends Component {
       isLoading: true,
       list: [
         {
-          title: "Abonnement",
-          icon: "check-square-o",
-          action: "user",
-          isLogout: false,
-          color: "#aaa69d",
-        },
-        {
-          title: "Mes évènements  ",
-          icon: "calendar-check-o",
-          action: "userevent",
-          isLogout: false,
-          color: "#aaa69d",
-        },
-        {
+      
+        
           title: "Deconnexion",
           icon: "power-off",
           action: "",
